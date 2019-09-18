@@ -15,9 +15,6 @@ const IndexPage = ({ data }) => (
         <Link to="/day/three/">Day 3</Link>
       </li>
       <li>
-        <Link to="/day/four/">Day 4</Link>
-      </li>
-      <li>
         <Link to="/page-2/">How'd we get the car?</Link>
       </li>
     </ul>

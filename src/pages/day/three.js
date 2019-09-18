@@ -2,51 +2,57 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../../components/layout"
-import SEO from "../../components/seo"
 import Img from "gatsby-image"
-import Section from "../../components/section"
+import DayHeader from "../../components/DayHeader"
+import DaySection from "../../components/DaySection"
 import DayFooter from "../../components/dayFooter"
+
+import SubheaderText from "../../components/SubheaderText"
 
 const DayThreePage = ({ data }) => (
   <Layout>
     {/* Intro */}
-    <Section backgroundHex="0000ff" textHex="ffffff">
-      <SEO title="Day 3" />
-      <h1>Day Three</h1>
-      <h2>08/24</h2>
-      <h3>VA to NC</h3>
-      <p>
-        Roanoke, speeding tickets, Blue Ridge Parkway, Boone, and beers in
-        Asheville.
-      </p>
-      <iframe
-        title="dayThreeSong"
-        src="https://open.spotify.com/embed/track/1opdGcwQmRmi7UsfgVqMW2"
-        width="306"
-        height="80"
-        frameborder="0"
-        allowtransparency="true"
-        allow="encrypted-media"
-        style={{
-          maxWidth: `100%`,
-        }}
-      ></iframe>
-    </Section>
+    <DayHeader
+      backgroundHex="E7AC7D"
+      textHex="000000"
+      dayNumber="3"
+      dayOfWeek="Saturday"
+      date="08/24"
+      origin="VA"
+      destination="NC"
+      introduction="Roanoke, speeding tickets, Blue Ridge Parkway, Boone, and beers in Asheville."
+    />
     {/* Leaving motel */}
-    <Section backgroundHex="00ff00">
-      <h2>Daleville, VA</h2>
-      <h2>8:00am</h2>
+    <DaySection
+      backgroundHex="C8ACD6"
+      time="08:00 AM"
+      destination="Daleville, VA"
+    >
       <p>Packing the car after a night at the Super 8. A quick breakfast.</p>
-    </Section>
+    </DaySection>
 
-    <Section backgroundHex="10f590">
-      <h2>Roanoke, VA</h2>
-      <h2>10:00am</h2>
+    <DaySection
+      backgroundHex="10f590"
+      time="10:00 AM"
+      destination="Roanoke, VA"
+    >
       <Img
         fluid={data.file.childImageSharp.fluid}
         alt="Gatsby Docs are awesome"
       />
-    </Section>
+      <p>A first glimpse of what charging could be for small town—downtown!</p>
+      <SubheaderText>
+        The city felt like it was frozen in time—in the best way possible.
+      </SubheaderText>
+
+      <SubheaderText align="center">
+        The list of things we’d do next time is too long...
+      </SubheaderText>
+
+      <SubheaderText align="right">
+        Did you know Roanoke is also home to Black Dog Salvage?
+      </SubheaderText>
+    </DaySection>
     <DayFooter />
   </Layout>
 )

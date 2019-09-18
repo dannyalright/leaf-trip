@@ -9,7 +9,7 @@ const Header = ({ siteTitle }) => (
       display: `flex`,
     }}
   >
-    <h1 style={{ margin: 0 }}>
+    <h1 style={{ fontSize: `1rem`, fontWeight: `400` }}>
       <Link
         to="/"
         style={{
@@ -17,7 +17,7 @@ const Header = ({ siteTitle }) => (
           textDecoration: `none`,
         }}
       >
-        {siteTitle}
+        Temporary header for {siteTitle}
       </Link>
     </h1>
   </header>
