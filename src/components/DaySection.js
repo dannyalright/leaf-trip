@@ -13,7 +13,7 @@ const DaySection = ({
       background: `#${backgroundHex}`,
       color: `#${textHex}`,
       marginBottom: `0px`,
-      padding: `2rem 1rem`,
+      padding: `3rem 1rem`,
       fontSize: `1.125rem`,
     }}
   >

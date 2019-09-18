@@ -5,7 +5,8 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `lightgrey`,
+      background: `black`,
+      padding: `1rem`,
       display: `flex`,
     }}
   >

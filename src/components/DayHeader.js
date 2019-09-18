@@ -17,7 +17,7 @@ const DayHeader = ({
       background: `#${backgroundHex}`,
       color: `#${textHex}`,
       marginBottom: `0px`,
-      padding: `1.5rem`,
+      padding: `3rem 1rem`,
     }}
   >
     <SEO title={`Day ${dayNumber}`} />

@@ -28,6 +28,22 @@ const DayThreePage = ({ data }) => (
       time="08:00 AM"
       destination="Daleville, VA"
     >
+      <Img
+        fixed={data.sun.childImageSharp.fixed}
+        alt="Gatsby Docs are awesome"
+        draggable={false}
+        imgStyle={{
+          mixBlendMode: `darken`,
+        }}
+      />
+      <Img
+        fluid={data.dannyPacking.childImageSharp.fluid}
+        alt="Gatsby Docs are awesome"
+        style={{
+          maxWidth: `80%`,
+        }}
+      />
+
       <p>Packing the car after a night at the Super 8. A quick breakfast.</p>
     </DaySection>
 
@@ -37,9 +53,10 @@ const DayThreePage = ({ data }) => (
       destination="Roanoke, VA"
     >
       <Img
-        fluid={data.file.childImageSharp.fluid}
+        fluid={data.roanoke.childImageSharp.fluid}
         alt="Gatsby Docs are awesome"
       />
+
       <p>A first glimpse of what charging could be for small town—downtown!</p>
       <SubheaderText>
         The city felt like it was frozen in time—in the best way possible.
@@ -48,6 +65,19 @@ const DayThreePage = ({ data }) => (
       <SubheaderText align="center">
         The list of things we’d do next time is too long...
       </SubheaderText>
+
+      <Img
+        fluid={data.line.childImageSharp.fluid}
+        alt="Gatsby Docs are awesome"
+        draggable={false}
+        style={{
+          maxWidth: `80%`,
+          margin: `auto`,
+        }}
+        imgStyle={{
+          mixBlendMode: `darken`,
+        }}
+      />
 
       <SubheaderText align="right">
         Did you know Roanoke is also home to Black Dog Salvage?
@@ -59,7 +89,35 @@ const DayThreePage = ({ data }) => (
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "dayThree/roanoke.jpg" }) {
+    roanoke: file(relativePath: { eq: "dayThree/roanoke.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    dannyPacking: file(relativePath: { eq: "dayThree/danny-packing.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    sun: file(relativePath: { eq: "doodles/sun.jpg" }) {
+      childImageSharp {
+        fixed(width: 56) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    squiggle: file(relativePath: { eq: "doodles/squiggle.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    line: file(relativePath: { eq: "doodles/line.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
