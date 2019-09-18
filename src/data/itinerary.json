@@ -1,0 +1,22 @@
+[
+  {
+    "day": 1,
+    "startPoint": "New York, NY",
+    "endPoint": "Lancaster, PA"
+  },
+  {
+    "day": 2,
+    "startPoint": "Lancaster, PA",
+    "endPoint": "Daleville, VA"
+  },
+  {
+    "day": 3,
+    "startPoint": "Daleville, VA",
+    "endPoint": "Asheville, NC"
+  },
+  {
+    "day": 4,
+    "startPoint": "Asheville, VA",
+    "endPoint": "Atlanta, GA"
+  }
+]
