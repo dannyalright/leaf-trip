@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ pageHex, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={data.site.siteMetadata.title} pageHex={pageHex} />
       <div
         style={{
           margin: `0 auto`,
@@ -38,7 +38,12 @@ const Layout = ({ children }) => {
 }
 
 Layout.propTypes = {
+  pageHex: PropTypes.string,
   children: PropTypes.node.isRequired,
+}
+
+Layout.defaultProps = {
+  pageHex: `000000`,
 }
 
 export default Layout

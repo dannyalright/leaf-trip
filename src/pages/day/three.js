@@ -9,12 +9,15 @@ import DayFooter from "../../components/dayFooter"
 
 import SubheaderText from "../../components/SubheaderText"
 
+const DayThreeThemeHex = "E7AC7D"
+const DayThreeTextHex = "070504"
+
 const DayThreePage = ({ data }) => (
-  <Layout>
+  <Layout pageHex={DayThreeThemeHex}>
     {/* Intro */}
     <DayHeader
-      backgroundHex="E7AC7D"
-      textHex="000000"
+      backgroundHex={DayThreeThemeHex}
+      textHex={DayThreeTextHex}
       dayNumber="3"
       dayOfWeek="Saturday"
       date="08/24"
