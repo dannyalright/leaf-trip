@@ -12,6 +12,7 @@ h2 {
   font-size: 15vw;
 }
 
-p {
+p,
+ul {
   font-family: "Cardo", serif;
 }
