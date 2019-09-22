@@ -43,7 +43,7 @@ p a {
 
 .hero-large {
   max-width: 960px;
-  margin: auto;
+  margin: 9rem auto;
 }
 
 .hero-small {

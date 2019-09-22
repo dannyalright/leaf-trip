@@ -14,6 +14,7 @@ import OneCrooked from "../../components/gallery/OneCrooked"
 
 import DividerLine from "../../components/dividers/DividerLine"
 import OneFlashy from "../../components/gallery/OneFlashy"
+import RabbitHole from "../../components/gallery/RabbitHole"
 
 const DayThreeThemeHex = "E7AC7D"
 const DayThreeTextHex = "070504"
@@ -74,10 +75,49 @@ const DayThreePage = ({ data }) => (
         </p>
       </div>
 
+      {/* Exploring Ronaoke */}
       <div class="hero-large">
         <SubheaderText>
           The city felt like it was frozen in time—in the best way possible.
         </SubheaderText>
+
+        <div
+          style={{
+            display: `flex`,
+            gap: `1rem`,
+            flexWrap: `wrap`,
+          }}
+        >
+          <Img
+            style={{ flex: `2` }}
+            fluid={data.hcCoffee.childImageSharp.fluid}
+            alt="TODO"
+          />
+          <Img
+            style={{ flex: `1` }}
+            fluid={data.lexiWithCamera.childImageSharp.fluid}
+            alt="TODO"
+          />
+        </div>
+        <div
+          style={{
+            display: `flex`,
+            gap: `1rem`,
+            marginTop: `1rem`,
+            flexWrap: `wrap`,
+          }}
+        >
+          <Img
+            style={{ flex: `1` }}
+            fluid={data.lexiSign.childImageSharp.fluid}
+            alt="TODO"
+          />
+          <Img
+            style={{ flex: `2` }}
+            fluid={data.biscuitSign.childImageSharp.fluid}
+            alt="TODO"
+          />
+        </div>
       </div>
 
       <div class="hero-small">
@@ -180,6 +220,16 @@ const DayThreePage = ({ data }) => (
         </p>
         <DividerLine />
       </div>
+
+      {/* Rabbit hole */}
+      <RabbitHole
+        photoOneFile="bathroom1.jpg"
+        photoOneAlt="TODO"
+        photoTwoFile="bathroom2.jpg"
+        photoTwoAlt="TODO"
+        photoThreeFile="bathroom3.jpg"
+        photoThreeAlt="TODO"
+      />
     </DaySection>
     <DayFooter />
   </Layout>
@@ -203,6 +253,36 @@ export const query = graphql`
     }
     dannyBlackDogMan: file(
       relativePath: { eq: "dayThree/danny-black-dog-man.jpg" }
+    ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    biscuitSign: file(relativePath: { eq: "dayThree/biscuit-sign.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    hcCoffee: file(relativePath: { eq: "dayThree/hc-coffee.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    lexiSign: file(relativePath: { eq: "dayThree/lexi-sign.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    lexiWithCamera: file(
+      relativePath: { eq: "dayThree/lexi-with-camera.jpg" }
     ) {
       childImageSharp {
         fluid {

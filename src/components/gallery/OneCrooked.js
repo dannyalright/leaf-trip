@@ -29,14 +29,11 @@ const OneCrooked = ({ photoFile, photoAlt }) => (
         return null
       }
 
-      // const photoSizes = photoFileMatch.node.childImageSharp.sizes
-
       const photoFluid = photoFileMatch.node.childImageSharp.fluid
 
       return (
         <Img
           alt={photoAlt}
-          // sizes={photoSizes}
           fluid={photoFluid}
           style={{
             maxWidth: `75%`,
