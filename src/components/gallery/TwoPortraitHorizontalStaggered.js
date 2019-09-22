@@ -48,6 +48,7 @@ const TwoLandscapeVerticalStaggered = ({
 
       return (
         <div
+          class="container-m-width container-m-height"
           style={{
             display: `flex`,
           }}

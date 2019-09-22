@@ -13,6 +13,7 @@ import TwoPortraitHorizontalStaggered from "../../components/gallery/TwoPortrait
 import OneCrooked from "../../components/gallery/OneCrooked"
 
 import DividerLine from "../../components/dividers/DividerLine"
+import OneFlashy from "../../components/gallery/OneFlashy"
 
 const DayThreeThemeHex = "E7AC7D"
 const DayThreeTextHex = "070504"
@@ -38,7 +39,7 @@ const DayThreePage = ({ data }) => (
     >
       <Img
         fixed={data.sun.childImageSharp.fixed}
-        alt="Gatsby Docs are awesome"
+        alt="TODO"
         draggable={false}
         imgStyle={{
           mixBlendMode: `darken`,
@@ -46,7 +47,7 @@ const DayThreePage = ({ data }) => (
       />
       <Img
         fluid={data.dannyPacking.childImageSharp.fluid}
-        alt="Gatsby Docs are awesome"
+        alt="TODO"
         style={{
           maxWidth: `80%`,
         }}
@@ -56,74 +57,129 @@ const DayThreePage = ({ data }) => (
     </DaySection>
 
     <DaySection
-      backgroundHex="10f590"
+      backgroundHex="FFE297"
       time="10:00 AM"
       destination="Roanoke, VA"
     >
+      <div
+        class="hero-large"
+        style={{
+          marginTop: `3rem`,
+          marginBottom: `rem`,
+        }}
+      >
+        <Img fluid={data.roanoke.childImageSharp.fluid} alt="TODO" />
+        <p style={{ textAlign: `right` }}>
+          A first glimpse of what charging could be for small town—downtown!
+        </p>
+      </div>
+
+      <div class="hero-large">
+        <SubheaderText>
+          The city felt like it was frozen in time—in the best way possible.
+        </SubheaderText>
+      </div>
+
+      <div class="hero-small">
+        <SubheaderText align="center">
+          The list of things we’d do next time is too long...
+        </SubheaderText>
+        <OneCrooked photoFile="art-museum-roanoke.png" photoAlt="TODO" />
+        <ul
+          style={{
+            textAlign: `center`,
+            listStyleType: `none`,
+            paddingLeft: `0`,
+          }}
+        >
+          <li>Art Museum</li>
+          <li>Roanoke Hotel</li>
+          <li>Winston Link Museum</li>
+        </ul>
+        <DividerLine />
+      </div>
+
+      <div class="hero-large">
+        <SubheaderText align="right">
+          Did you know Roanoke is also home to Black Dog Salvage?
+        </SubheaderText>
+        <TwoLandscapeVerticalStaggered
+          photoOneFile="howard-johnsons.jpg"
+          photoOneAlt="TODO"
+          photoTwoFile="black-dog-inside.jpg"
+          photoTwoAlt="TODO"
+        />
+        <p>AKA American Salvage from TV.</p>
+      </div>
+
       <Img
-        fluid={data.roanoke.childImageSharp.fluid}
-        alt="Gatsby Docs are awesome"
-      />
-
-      <p style={{ textAlign: `right` }}>
-        A first glimpse of what charging could be for small town—downtown!
-      </p>
-
-      <SubheaderText>
-        The city felt like it was frozen in time—in the best way possible.
-      </SubheaderText>
-
-      <SubheaderText align="center">
-        The list of things we’d do next time is too long...
-      </SubheaderText>
-
-      <OneCrooked photoFile="art-museum-roanoke.png" photoAlt="TODO" />
-
-      <ul
+        fluid={data.dannyBlackDogMan.childImageSharp.fluid}
+        alt="TODO"
         style={{
-          textAlign: `center`,
-          listStyleType: `none`,
-          paddingLeft: `0`,
+          maxWidth: `50%`,
+        }}
+      />
+      <div
+        style={{
+          maxWidth: `75%`,
+          margin: `-3rem auto 6rem auto`,
         }}
       >
-        <li>Art Museum</li>
-        <li>Roanoke Hotel</li>
-        <li>Winston Link Museum</li>
-      </ul>
+        <Img
+          fixed={data.arrow.childImageSharp.fixed}
+          alt="TODO"
+          draggable={false}
+          style={{ marginLeft: `60%` }}
+          imgStyle={{
+            mixBlendMode: `darken`,
+            transform: `rotate(96deg)`,
+          }}
+        />
+        <p style={{ display: `block`, textAlign: `right` }}>
+          I couldn’t find Danny. Here he is chatting with the cutest old man.
+        </p>
+      </div>
 
-      <DividerLine />
+      {/* Roanoke Star */}
+      <div class="hero-small">
+        <OneFlashy photoFile="roanoke-star-cam.jpg" photoAlt="TODO" />
+        <p
+          style={{
+            textAlign: `center`,
+            fontSize: `1.5rem`,
+            marginBottom: `0`,
+          }}
+        >
+          <em>Hey fam—we’re webcam stars!</em>
+        </p>
+        <p
+          style={{
+            textAlign: `center`,
+            marginTop: `0.5rem`,
+          }}
+        >
+          Yep, we did call our family for them to see us on the{" "}
+          <a href="https://www.roanokeva.gov/1687/StarCam">webcam</a>.
+        </p>
+      </div>
 
-      <SubheaderText align="right">
-        Did you know Roanoke is also home to Black Dog Salvage?
-      </SubheaderText>
-
-      <TwoLandscapeVerticalStaggered
-        photoOneFile="howard-johnsons.jpg"
-        photoOneAlt="TODO"
-        photoTwoFile="black-dog-inside.jpg"
-        photoTwoAlt="TODO"
-      />
-
-      <p>AKA American Salvage from TV.</p>
-      <p>I couldn’t find Danny. Here he is chatting with the cutest old man.</p>
-
-      <TwoPortraitHorizontalStaggered
-        photoOneFile="roanoke-star.jpg"
-        photoOneAlt="TODO"
-        photoTwoFile="danny-lexi-star.jpg"
-        photoTwoAlt="TODO"
-      />
-
-      <p
-        style={{
-          textAlign: `center`,
-        }}
-      >
-        <strong>Fun Fact:</strong> Christmas Tree decoration tidbits (Lexi to
-        fill this out more).
-      </p>
-
-      <DividerLine />
+      <div class="hero-large">
+        <TwoPortraitHorizontalStaggered
+          photoOneFile="roanoke-star.jpg"
+          photoOneAlt="TODO"
+          photoTwoFile="danny-lexi-star.jpg"
+          photoTwoAlt="TODO"
+        />
+        <p
+          style={{
+            textAlign: `center`,
+          }}
+        >
+          <strong>Fun Fact:</strong> Christmas Tree decoration tidbits (Lexi to
+          fill this out more).
+        </p>
+        <DividerLine />
+      </div>
     </DaySection>
     <DayFooter />
   </Layout>
@@ -145,6 +201,15 @@ export const query = graphql`
         }
       }
     }
+    dannyBlackDogMan: file(
+      relativePath: { eq: "dayThree/danny-black-dog-man.jpg" }
+    ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     sun: file(relativePath: { eq: "doodles/sun.jpg" }) {
       childImageSharp {
         fixed(width: 56) {
@@ -152,10 +217,10 @@ export const query = graphql`
         }
       }
     }
-    squiggle: file(relativePath: { eq: "doodles/squiggle.jpg" }) {
+    arrow: file(relativePath: { eq: "doodles/arrow.jpg" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fixed(width: 100) {
+          ...GatsbyImageSharpFixed
         }
       }
     }

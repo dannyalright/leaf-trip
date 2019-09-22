@@ -13,30 +13,32 @@ const DaySection = ({
       background: `#${backgroundHex}`,
       color: `#${textHex}`,
       marginBottom: `0px`,
-      padding: `3rem 1rem`,
+      padding: `3rem 0`,
       fontSize: `1.125rem`,
     }}
   >
-    <h2
-      style={{
-        fontSize: `1rem`,
-        fontWeight: `400`,
-        letterSpacing: `0.4rem`,
-        margin: `0 0 1rem 0`,
-        textTransform: `uppercase`,
-      }}
-    >
-      {time}
-    </h2>
-    <h1
-      style={{
-        fontSize: `2.25rem`,
-        fontWeight: `400`,
-        margin: `0`,
-      }}
-    >
-      {destination}
-    </h1>
+    <div class="container-m-width">
+      <h2
+        style={{
+          fontSize: `1rem`,
+          fontWeight: `400`,
+          letterSpacing: `0.4rem`,
+          margin: `0 0 1rem 0`,
+          textTransform: `uppercase`,
+        }}
+      >
+        {time}
+      </h2>
+      <h1
+        style={{
+          fontSize: `2.25rem`,
+          fontWeight: `400`,
+          margin: `0`,
+        }}
+      >
+        {destination}
+      </h1>
+    </div>
 
     {children}
   </section>

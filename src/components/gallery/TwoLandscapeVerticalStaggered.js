@@ -44,7 +44,7 @@ const TwoLandscapeVerticalStaggered = ({
       const photoTwoSizes = photoTwoFileMatch.node.childImageSharp.sizes
 
       return (
-        <>
+        <div class="container-m-width container-m-height">
           <Img
             alt={photoOneAlt}
             sizes={photoOneSizes}
@@ -61,7 +61,7 @@ const TwoLandscapeVerticalStaggered = ({
               margin: `auto 0 auto auto`,
             }}
           />
-        </>
+        </div>
       )
     }}
   />

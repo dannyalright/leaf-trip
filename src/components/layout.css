@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Archivo:400,500,700|Cardo&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Archivo:400,500,700|Cardo:400,400i,700&display=swap");
 
 body {
   margin: 0;
@@ -15,4 +15,38 @@ h2 {
 p,
 ul {
   font-family: "Cardo", serif;
+}
+
+p a {
+  color: inherit;
+}
+
+.container-m-width {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.container-m-height {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.container-p-width {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.container-p-height {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.hero-large {
+  max-width: 960px;
+  margin: auto;
+}
+
+.hero-small {
+  max-width: 640px;
+  margin: auto;
 }

@@ -20,57 +20,65 @@ const DayHeader = ({
       padding: `3rem 1rem`,
     }}
   >
-    <SEO title={`Day ${dayNumber}`} />
-    <h1
-      style={{
-        fontSize: `3rem`,
-        fontWeight: `700`,
-        marginBottom: `1rem`,
-      }}
-    >
-      Day {dayNumber}
-    </h1>
-    <h2
-      style={{
-        fontSize: `3rem`,
-        fontWeight: `400`,
-        marginTop: `0`,
-      }}
-    >
-      {dayOfWeek} {date}
-    </h2>
-    <h3
-      style={{
-        fontSize: `4.5rem`,
-        fontWeight: `400`,
-        margin: `0`,
-      }}
-    >
-      {origin} to {destination}
-    </h3>
-    <p
-      style={{
-        fontSize: `1.5rem`,
-        fontFamily: `"Cardo", serif`,
-        fontWeight: `400`,
-        marginTop: `1rem`,
-      }}
-    >
-      {introduction}
-    </p>
-    <iframe
-      title="dayThreeSong"
-      src="https://open.spotify.com/embed/track/1opdGcwQmRmi7UsfgVqMW2"
-      width="100%"
-      height="80"
-      frameBorder="0"
-      allowtransparency="true"
-      allow="encrypted-media"
-      style={{
-        maxWidth: `100%`,
-        margin: `3rem 0`,
-      }}
-    ></iframe>
+    <div class="hero-large">
+      <SEO title={`Day ${dayNumber}`} />
+      <h1
+        style={{
+          fontSize: `3rem`,
+          fontWeight: `700`,
+          marginBottom: `1rem`,
+        }}
+      >
+        Day {dayNumber}
+      </h1>
+      <h2
+        style={{
+          fontSize: `3rem`,
+          fontWeight: `400`,
+          marginTop: `0`,
+        }}
+      >
+        {dayOfWeek} {date}
+      </h2>
+      <h3
+        style={{
+          fontSize: `4.5rem`,
+          fontWeight: `400`,
+          margin: `0`,
+        }}
+      >
+        {origin} to {destination}
+      </h3>
+      <p
+        style={{
+          fontSize: `1.5rem`,
+          fontFamily: `"Cardo", serif`,
+          fontWeight: `400`,
+          marginTop: `1rem`,
+        }}
+      >
+        {introduction}
+      </p>
+      <div
+        style={{
+          maxWidth: `420px`,
+        }}
+      >
+        <iframe
+          title="dayThreeSong"
+          src="https://open.spotify.com/embed/track/1opdGcwQmRmi7UsfgVqMW2"
+          width="100%"
+          height="80"
+          frameBorder="0"
+          allowtransparency="true"
+          allow="encrypted-media"
+          style={{
+            maxWidth: `100%`,
+            margin: `3rem 0`,
+          }}
+        ></iframe>
+      </div>
+    </div>
   </section>
 )
 
