@@ -17,7 +17,7 @@ const DaySection = ({
       fontSize: `1.125rem`,
     }}
   >
-    <div class="container-m-width">
+    <div class="">
       <h2
         style={{
           fontSize: `1rem`,

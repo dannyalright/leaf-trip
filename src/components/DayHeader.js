@@ -20,7 +20,7 @@ const DayHeader = ({
       padding: `3rem 1rem`,
     }}
   >
-    <div class="hero-large">
+    <div class="container-medium">
       <SEO title={`Day ${dayNumber}`} />
       <h1
         style={{

@@ -55,6 +55,7 @@ const RabbitHole = ({
       return (
         <a href="http://TODO.com">
           <div
+            class="container-medium"
             style={{
               overflow: `hidden`,
             }}

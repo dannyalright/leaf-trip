@@ -1,9 +1,9 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import FlashLine from "../dividers/FlashLine"
+import ArrowCurved from "../shapes/ArrowCurved"
 
-const OneFlashy = ({ photoFile, photoAlt }) => (
+const OneLeftArrowRight = ({ photoFile, photoAlt, text }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -30,23 +30,34 @@ const OneFlashy = ({ photoFile, photoAlt }) => (
         return null
       }
 
-      // const photoSizes = photoFileMatch.node.childImageSharp.sizes
-
       const photoFluid = photoFileMatch.node.childImageSharp.fluid
 
       return (
-        <div style={{ margin: `3rem auto` }}>
-          <FlashLine />
-          <Img alt={photoAlt} fluid={photoFluid} style={{}} />
-          <FlashLine upsideDown={true} />
-        </div>
+        <>
+          <Img
+            fluid={photoFluid}
+            alt={photoAlt}
+            style={{
+              maxWidth: `50%`,
+            }}
+          />
+          <div
+            style={{
+              maxWidth: `75%`,
+              margin: `-3rem auto 6rem auto`,
+            }}
+          >
+            <ArrowCurved />
+            <p style={{ display: `block`, textAlign: `right` }}>{text}</p>
+          </div>
+        </>
       )
     }}
   />
 )
 
-OneFlashy.defaultProps = {
+OneLeftArrowRight.defaultProps = {
   photoAlt: `A photo from our road trip.`,
 }
 
-export default OneFlashy
+export default OneLeftArrowRight

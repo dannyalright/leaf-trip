@@ -17,8 +17,8 @@ const TwoLandscapeVerticalStaggered = ({
               relativePath
               name
               childImageSharp {
-                sizes(maxWidth: 600) {
-                  ...GatsbyImageSharpSizes
+                fluid {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -40,14 +40,14 @@ const TwoLandscapeVerticalStaggered = ({
         return null
       }
 
-      const photoOneSizes = photoOneFileMatch.node.childImageSharp.sizes
-      const photoTwoSizes = photoTwoFileMatch.node.childImageSharp.sizes
+      const photoOneFluid = photoOneFileMatch.node.childImageSharp.fluid
+      const photoTwoFluid = photoTwoFileMatch.node.childImageSharp.fluid
 
       return (
-        <div class="container-m-width container-m-height">
+        <div class=" ">
           <Img
             alt={photoOneAlt}
-            sizes={photoOneSizes}
+            fluid={photoOneFluid}
             style={{
               maxWidth: `80%`,
               margin: `0 auto 1rem 0`,
@@ -55,7 +55,7 @@ const TwoLandscapeVerticalStaggered = ({
           />
           <Img
             alt={photoTwoAlt}
-            sizes={photoTwoSizes}
+            fluid={photoTwoFluid}
             style={{
               maxWidth: `80%`,
               margin: `auto 0 auto auto`,

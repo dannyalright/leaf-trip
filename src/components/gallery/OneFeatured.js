@@ -1,9 +1,8 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import FlashLine from "../dividers/FlashLine"
 
-const OneFlashy = ({ photoFile, photoAlt }) => (
+const OneFeatured = ({ photoFile, photoAlt, children }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -30,23 +29,20 @@ const OneFlashy = ({ photoFile, photoAlt }) => (
         return null
       }
 
-      // const photoSizes = photoFileMatch.node.childImageSharp.sizes
-
       const photoFluid = photoFileMatch.node.childImageSharp.fluid
 
       return (
-        <div style={{ margin: `3rem auto` }}>
-          <FlashLine />
-          <Img alt={photoAlt} fluid={photoFluid} style={{}} />
-          <FlashLine upsideDown={true} />
-        </div>
+        <>
+          <Img alt={photoAlt} fluid={photoFluid} />
+          {children}
+        </>
       )
     }}
   />
 )
 
-OneFlashy.defaultProps = {
+OneFeatured.defaultProps = {
   photoAlt: `A photo from our road trip.`,
 }
 
-export default OneFlashy
+export default OneFeatured

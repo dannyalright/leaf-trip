@@ -5,6 +5,7 @@ body {
   font-family: "Archivo", sans-serif;
 }
 
+/* Typography */
 h1 {
   font-size: 20vw;
 }
@@ -21,32 +22,40 @@ p a {
   color: inherit;
 }
 
-.container-m-width {
-  margin-left: 3rem;
-  margin-right: 3rem;
-}
-
-.container-m-height {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-.container-p-width {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-.container-p-height {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.hero-large {
-  max-width: 960px;
+/* Container sizing */
+.container-large {
+  max-width: 1200px;
   margin: 9rem auto;
 }
 
-.hero-small {
+.container-medium {
+  max-width: 960px;
+  margin: 9rem auto;
+  /* padding: 0 3rem; */
+}
+
+.container-small {
   max-width: 640px;
   margin: auto;
 }
+
+/* Stop text from clashing with sides on small screens  */
+@media only screen and (max-width: calc(960px + 2rem)) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+/* Or, if I decide to do it case-by-case, I could apply something like the below to individual elements:  */
+/* .text-left {
+  margin-left: 1rem;
+}
+.text-right {
+  margin-right: 1rem;
+} */
